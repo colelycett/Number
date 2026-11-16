@@ -48,10 +48,20 @@ typedef struct real {
     size_t OFFSET;
 } real;
 
+// Digit
 struct digit *make_digit(char arg);
 int is_digit(digit *target);
 
 void load_digit(char arg, digit *target);
 void print_digit(digit *target);
+
+// Number
+struct number *make_number(int arg);
+int is_number(number *target);
+
+void load_number(int arg, number *target);
+void print_number(number *target);
+void load_number_str(char *arg, number *target);
+void free_number(number *target);
 
 #endif
